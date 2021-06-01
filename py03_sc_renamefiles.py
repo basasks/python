@@ -1,5 +1,5 @@
 #################################################################################
-# TITLE:            Bulk Renaming Program                                       #
+# TITLE:            Bulk File Renaming Program                                  #
 # AUTHOR:           BASASKS                                                     #
 # PYTHON VERSION:   Python 3.5.9                                                #
 # USAGE:            python3 py03_sc_renamefiles.py                              #
@@ -11,13 +11,21 @@
 #                   2. Rename only file for cetain extension type               #
 #################################################################################
 
+
+#####   MODULES
+
 import os
 from pathlib import Path
 
-# STATIC VARIABLES
+
+#####   STATIC VARIABLES
+
 filepath = "/home/basasks/input/py03/"
 fileprefix = "testprefix_"
 counter = 1
+
+
+#####   FUNCTION
 
 def renamefile(nameold):
     global counter
@@ -27,10 +35,13 @@ def renamefile(nameold):
     os.rename(filepath+nameold, filepath+namenew)
     counter += 1
 
-# LOOP THROUGH ALL FILES IN FOLDER
+
+#####   MAIN CODE
+
 filearray = os.listdir(filepath)
+
+# LOOP THROUGH ALL FILES IN FOLDER
+
 for t_filename in enumerate(filearray):
     filename = t_filename[1]
     renamefile(filename)
-    
-    

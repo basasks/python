@@ -7,19 +7,22 @@
 #########################################################################
 
 
+#####   MODULES
+
 from datetime import datetime, date, time, timedelta
 import calendar
 import math
 
 
-# BASE VARIABLES
+#####   MAIN CODE
+
+# INITIALIZE BASE VARIABLES
 
 #curr_ts = datetime.now()
 curr_ts = datetime(2021, 7, 31)
 curr_tsstr = curr_ts.strftime("%Y-%m-%d %H:%M:%S.%f")
 base_dt = datetime(year=1900,month=1,day=1)
 base_dtstr = base_dt.strftime("%Y-%m-%d")
-
 
 # DATE DIMENSION VARIABLES
 
@@ -110,7 +113,7 @@ dim_72hrsafter = curr_ts + timedelta(hours=72)
 str_dim_72hrsafter = str(dim_72hrsafter)
 
 
-# OUTPUT
+# OUTPUT DATE DIMENSION
 
 print("\n")
 print("TIMESTAMP: " + curr_tsstr)

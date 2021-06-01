@@ -1,12 +1,22 @@
 #################################################################################
-# TITLE:            Let's Play BINGO                                            #
+# TITLE:            Let's Play B-I-N-G-O                                        #
 # AUTHOR:           BASASKS                                                     #
 # PYTHON VERSION:   Python 3.5.9                                                #
 # USAGE:            python3 py04_sc_bingo.py                                    #
-# NOTES:            Input: # of players, # of cards per player                  #
+# NOTES:            1. User Input                                               #
+#                       - Number of players, maximum=99                         #
+#                       - Number of cards per player, maximum=99                #
+#                   2. Limitations                                              #
+#                       - No freebies on middle of card                         #
 #################################################################################
 
+
+#####   MODULES
+
 import random
+
+
+#####   INITIALIZE VARIABLES
 
 ctr = 0
 listcardids = []
@@ -15,6 +25,9 @@ listnames = []
 dictallcards = {}
 dictallcardscopy = {}
 listrand = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
+
+
+#####   FUNCTION
 
 def checkinputint(prompt):
     while True:
@@ -139,7 +152,6 @@ def maindraw():
                     ls[col][row] = 0
         ncardid = key
         printcard(ncardid, dictallcards[key])
-        #print(key + " = " + str(dictallcards[key]))
         
     # Check pattern if exists
     lswinners = checkpattern()
@@ -153,7 +165,7 @@ def maindraw():
         maindraw()
 
 
-# MAIN PROGRAM FLOW
+#####   MAIN PROGRAM FLOW
 
 # Create list of all player cards
 setuplist()
@@ -170,4 +182,3 @@ dictallcardscopy = dictallcards
 
 # Main Draw
 maindraw()
-

@@ -6,7 +6,13 @@
 # NOTES:                                                    #
 #############################################################
 
+
+#####   MODULES
+
 import random
+
+
+#####   FUNCTIONS
 
 def checkinput():
     global rollagain
@@ -15,8 +21,6 @@ def checkinput():
     elif rollagain == 'no':
         print('\nGoodbye!')
     else:
-        #print("\nPlease enter yes or no.")
-        #rollagain = input('Would you like to roll again? yes/no\n')
         rollagain = input('\nPlease enter yes or no. Would you like to roll again?\n')
         checkinput()
 
@@ -27,6 +31,9 @@ def rolldice():
     print('\nYou rolled: ', d1, 'and', d2)
     rollagain = input('Would you like to roll again?\n')
     checkinput()
+
+
+#####   MAIN CODE
 
 print('\nWelcome to the Dice Rolling Simulator!')
 rolldice()

@@ -1,0 +1,8 @@
+#################################################################################
+# SCRIPT NAME:		_PLACEHOLDER_SCRIPTNAME_
+# AUTHOR:		BASASKS
+# PYTHON VERSION:	Python 3.5.9 
+# USAGE:		_PLACEHOLDER_USAGE_	
+#################################################################################
+
+<START OF ORIGINAL SCRIPT>
